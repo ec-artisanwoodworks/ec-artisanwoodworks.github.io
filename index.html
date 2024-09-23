@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en"> <!--ensures usage of lastest html version + language-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--this code is used to control edge rendering mode as edge doesn't follow web standards more consistently-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ensures proper scaling on mobile devices-->
+
+    <!--Font Awesome;-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!-- Remix Icon-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!--Personal sheet-->  
+    <link rel="stylesheet" href="style.css">
+    <title>Eleonora C. WoodWorking</title>
+
+
+
+
+
+
+
+    <!--emailjs-->
+    <script type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('IyWorBnSUtJvVcL9N');
+        })();
+    </script>
+
+
+
+
+
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+
+    <body>
+
+        <!--------------------------------Homepage Video----------------------------------------------->
+        <!--<video autoplay muted loop plays-inline id="home_video">
+            <source src="./Videos/SnackBoard_1_video_1to1ratio.mp4" type="video/mp4">
+        </video>-->
+
+
+
+        <header>
+            <!--Navigation Bar-->
+            <div class="navbar"> <!-- div is used as a container for a group of html elements-->
+                <!--Logo-->
+                <div class="logo_container">
+                    <a href="#home"><img src="Images/logo_version2.22_3_white.png" class="logo_img"></a>
+                    <div class="logo"><a href="#home">Eleonora C. Artisan Woodworks</a></div>
+                </div>
+
+
+                <!--links-->
+                <ul class="links"> <!--ul=unordered list-->
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#work">My Work</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+
+                <!--toggle-->
+                <div class="toggle_btn"> <!--In this case I'm adding a toggle button-->
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!--Dropdown Menu-->
+            <div class="dropdown_menu">
+                <li> <a href="#about" class="dropdown-link">About</a></li>
+                <li> <a href="#work" class="dropdown-link">My Work</a></li>
+                <li> <a href="#contact" class="dropdown-link">Contact</a></li>   
+            </div>
+        </header>
+
+        
+
+
+
+
+
+        
+
+        <main>
+            <!--HOME-->
+            <section id="home">
+                <div class="video"> 
+                    <video autoplay muted loop plays-inline id="home_video">
+                        <source src="./Videos/SnackBoard_1_video_1to1ratio.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content"> 
+                    <h1>Longmont, Colorado - Small Shop Woodcrafter</h1> <!--small business vs shop-->
+                </div>
+            </div>
+            </section>
+
+
+
+            <!--ABOUT-->
+            <section id="about">
+                <div class="main">
+                    <img src="./Images/carving_gear_crop.jpg">
+                    <div class="text">
+                        <h1>About</h1>
+                        <!--<p>Longmont, Colorado's woodcrafter. I create woodworking projects from wooden cooking spoons to live edge coffee tables. 
+                            All projects are created by me from our garage at home, which has been turned into a small woodworking shop as my hobby drastically expanded through the years into more than just a hobby. 
+                            I feel incredibly fortunate to be in a position where I can now share my crafts with a bigger audience.
+                            My goal is to create to a wider audience, which will allow me to invest in even more and better equipment to be able to create bigger things! </p>-->
+
+                        <h3>Longmont, Colorado's woodcrafter</h3>
+
+                        <p>From small measuring spoons to stunning live edge coffee tables, every piece I craft is born from my passion for woodworking.
+                            What began as a hobby in my garage has grown into a bustling woodshop, where each project is made with care and attention to detail. 
+                            No two pieces are the same, as each creation celebrates the unique beauty of the wood itself.
+                            
+                            I’m thrilled to now share my work with a broader audience. 
+                            With your support, I can continue to grow, investing in more diverse tools and materials, allowing me to take on new, exciting projects and explore fresh possibilities in woodworking.
+
+                            
+                        <p>&nbsp;</p> 
+                        Thank you for being a part of this journey!</p>
+
+
+                        <!--<p>&nbsp;</p> 
+                        <p> I'd love for you to reach out to <a href="#contact"> talk </a> about any ideas you might have for your new woorden craft! </p>
+                        <p>&nbsp;</p> 
+                        <p>Check out some of my <a href="#work"> past projects </a>! </p>-->
+                        <p>&nbsp;</p> 
+                        <p>&nbsp;</p> 
+                        <p>&nbsp;</p> 
+
+                        <h3>Have a Custom Idea?</h3>
+                        <p> I'm constantly working on new pieces throughout the year, but if you have a specific vision for a custom project, I’d love to collaborate with you. Let's work together to create something truly unique and special just for you. </p>
+                        <p>&nbsp;</p> 
+
+
+                    </div>
+                </div> 
+            </section>
+            
+
+
+
+
+
+            <!--WORK-->
+            <section class="work" id="work">
+
+                <div class="heading">
+                    <h1>My Work</h1>
+                </div>
+
+                
+                <div class="box_container"> 
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product1.html">
+                                <img src="./Images/Banana_Hanger/Banana_hanger_outdoor_v3.jpg" alt="">
+                            </a> 
+                            <h3> Banana Stand </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product1.html">
+                                <button class="button-33" role="button">View</button>
+                            </a>
+
+                            
+                        </div>
+
+                    </div>
+
+
+                
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product2.html">
+                                <img src="./Images/Small_Spoons/all_scooping_spoons.jpg" alt="">
+                            </a> 
+                            <h3>Small Scooping Spoons</h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product2.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                       
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product3.html">
+                                <img src="./Images/cutting_board.jpg" alt="">
+                            </a> 
+                            <h3> Cutting Board </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product3.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product4.html">
+                                <img src="./Images/Cutting_Board_Inlay/Cutting_Board_Inlay_v1.jpg" alt="">
+                            </a>
+                            <h3> Live Edge Cutting Board with Inlay </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product4.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product5.html">
+                                <img src="./Images/Charcuterie_Board/Charcuterie_board_side.jpg" alt="">
+                            </a>
+                            <h3> Live Edge Charcuterie Board </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product5.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product6.html">
+                                <img src="./Images/Cooking_Spoons/kitchen_spoon_cherry_outside_v1.jpg" alt="">
+                            </a>
+                            <h3> Cooking Spoons </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product6.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="product">
+                            <a href="product7.html">
+                                <img src="./Images/Cooking_Spoons_Inlay/kitchen_spoon_repurposedcherry_outdoor_v2.jpg">
+                            </a>
+                            <h3> Cooking Spoon with Inlay </h3>
+                        </div>
+
+                        <div class="view_btn">
+                            <a href="product7.html">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+            <!--Contact-->
+            <section id="contact">
+                <div class="contact_form">
+                    <div class="header"> <!--temp edit to overlay under construction!!!!-->
+                        <h1> Get In Touch! </h1>
+                        <!--<h1 class="overlay-text"><i>Under Construction</i></h1>-->
+                    </div>
+
+
+
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="366530e3-aafd-4952-aeb2-e6a17b685e3c">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <input type="text" name="name" placeholder="First and Last Name" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="text" name="subject" placeholder="Add a Subject" required>
+                    <textarea name="message" cols="30" rows="8" placeholder="Your message" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <input type="submit" value="Submit" class="submit_btn">                
+                </form>
+
+
+                </div>
+                <!--<div class="contact_img">
+                    <img src="./Images/logo_version2.22_3.png">
+                </div>-->
+                <div class="contact_gif">
+                    <img src="./Photoshop/GIF/animated_contact_v3_noleaf.gif">
+                </div>
+            </section>  
+
+
+        </main>
+
+
+
+        <!--copyright -->
+        <footer>
+                <p>&copy; 2024 Eleonora Claessens
+                    <!--<a href="#home"><img src="./Images/logo_version2.22_3_white.png" class="logo_img_foot"></a>-->
+        </footer>
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+<!--JAVASCRIPT-->
+        <script> 
+            //DROP DOWN MENU
+            const toggle_button = document.querySelector('.toggle_btn');
+            const toggle_button_icon = document.querySelector('.toggle_btn i');
+            const dropdownmenu = document.querySelector('.dropdown_menu');
+
+            toggle_button.onclick = function() {
+                dropdownmenu.classList.toggle('open');
+                updateToggleButtonIcon();
+            };
+        
+            function updateToggleButtonIcon() {
+                const isOpen = dropdownmenu.classList.contains('open');
+                toggle_button_icon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            }
+        
+            // Close dropdown
+            document.addEventListener("DOMContentLoaded", function() {
+                var dropdownLinks = document.querySelectorAll('.dropdown_menu .dropdown-link');
+            
+                dropdownLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        dropdownmenu.classList.remove('open');
+                        updateToggleButtonIcon(); // Update the icon when the menu is closed
+                    });
+                });
+            });
+
+        </script>
+
+
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+    </body>
+
+</html>

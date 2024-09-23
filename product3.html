@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"> <!--ensures usage of lastest html version + language-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--this code is used to control edge rendering mode as edge doesn't follow web standards more consistently-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ensures proper scaling on mobile devices-->
+
+    <!--Font Awesome;-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!-- Remix Icon-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!--Personal sheet-->  
+    <link rel="stylesheet" href="style.css">
+    <title>Eleonora RMC. WoodWorking</title>
+
+
+
+    <!--emailjs-->
+    <script type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('IyWorBnSUtJvVcL9N');
+        })();
+    </script>
+
+
+
+</head>
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+
+
+    <body>
+
+        <header>
+            <!--Navigation Bar-->
+            <div class="navbar"> <!-- div is used as a container for a group of html elements-->
+                <!--Logo-->
+                <div class="logo_container">
+                    <a href="index.html"><img src="Images/logo_version2.22_3_white.png" class="logo_img"></a>
+                    <div class="logo"><a href="index.html">Eleonora C. Artisan Woodworks</a></div>
+                </div>
+
+
+                <!--links-->
+                <ul class="links"> <!--ul=unordered list-->
+                    <li> <a href="index.html#about">About</a></li>
+                    <li> <a href="index.html#work">My Work</a></li>
+                    <li> <a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <!--toggle-->
+                <div class="toggle_btn"> <!--In this case I'm adding a toggle button-->
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!--Dropdown Menu-->
+            <div class="dropdown_menu">
+                <li> <a href="index.html#about" class="dropdown-link">About</a></li>
+                <li> <a href="index.html#work" class="dropdown-link">My Work</a></li>
+                <li> <a href="index.html#contact" class="dropdown-link">Contact</a></li>   
+            </div>
+        </header>
+
+        
+
+
+
+
+
+        
+
+        <main>
+
+
+            <!--Product-->
+            <section class="product" id="product">
+
+                
+                <div class="box_container"> 
+                    
+                    <div class="img_box">
+
+                        <div class="small_img">
+                            <button class="selected"><img src="./Images/cutting_board.jpg" alt=""></button>
+                            <br>
+                            <button class="selected"><img src="./Images/Plain_cutting_board/Cuttingboard_expl.jpg" alt=""></button>
+                            <br>
+                        </div>
+                        
+                        <div class="main_img">
+                            <img src="./Images/cutting_board.jpg" alt="">
+                            
+
+                        </div>
+
+                    </div>
+
+                    <div class="text_box">
+                        <h2> Cutting Board </h2>
+                        <p> It's a cutting board. A board to cut things on.</p>
+                        <p>&nbsp;</p>
+                        <p> This is our personal cutting board. It's made out of oak, as I was practicing creating seemless gluelines. 
+                            Our cutting board is still breathing and well! However, since oak is a softer kind of wood, I wouldn't neccessarily recommend this type of wood, but something stronger.</p>
+                        <p>&nbsp;</p>
+                        <a href="javascript:history.back()">
+                            <button type="button"> Go Back </button>
+                        </a>
+
+                        
+                        </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+        <!--copyright -->
+        <footer>
+                <p>&copy; 2024 Eleonora Claessens
+                    <!--<a href="#home"><img src="./Images/logo_version2.22_3_white.png" class="logo_img_foot"></a>-->
+        </footer>
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+<!--JAVASCRIPT-->
+
+<script>
+    function setupImageSwitcher() {
+        // Get all the buttons and the main image
+        const buttons = document.querySelectorAll('.small_img button');
+        const mainImage = document.querySelector('.main_img img');
+    
+        // Set up click event listeners for each button
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update the main image source
+                const newSrc = this.querySelector('img').src;
+                mainImage.src = newSrc;
+            
+                // Remove 'selected' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('selected'));
+            
+                // Add 'selected' class to the clicked button
+                this.classList.add('selected');
+            });
+        });
+    }
+
+    // Ensure the function runs after the DOM has fully loaded
+    document.addEventListener('DOMContentLoaded', setupImageSwitcher);
+
+
+
+
+
+
+
+
+
+    // Function to toggle fullscreen mode on main image
+    document.querySelector('.main_img img').addEventListener('click', function () {
+        // Create the fullscreen container
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.classList.add('fullscreen-container');
+    
+        // Add the image to the fullscreen container
+        const fullscreenImage = this.cloneNode(); // Clone the clicked image
+        fullscreenContainer.appendChild(fullscreenImage);
+    
+        // Add the fullscreen container to the body
+        document.body.appendChild(fullscreenContainer);
+    
+        // Close the fullscreen when the image is clicked
+        fullscreenImage.addEventListener('click', function () {
+            document.body.removeChild(fullscreenContainer); // Remove the fullscreen container
+        });
+    });
+
+
+
+
+
+    //DROP DOWN MENU
+    const toggle_button = document.querySelector('.toggle_btn');
+    const toggle_button_icon = document.querySelector('.toggle_btn i');
+    const dropdownmenu = document.querySelector('.dropdown_menu');
+
+    toggle_button.onclick = function() {
+        dropdownmenu.classList.toggle('open');
+        updateToggleButtonIcon();
+    };
+
+    function updateToggleButtonIcon() {
+        const isOpen = dropdownmenu.classList.contains('open');
+        toggle_button_icon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    }
+
+    // Close dropdown
+    document.addEventListener("DOMContentLoaded", function() {
+        var dropdownLinks = document.querySelectorAll('.dropdown_menu .dropdown-link');
+    
+        dropdownLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                dropdownmenu.classList.remove('open');
+                updateToggleButtonIcon(); // Update the icon when the menu is closed
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+</body>
+
+</html>
