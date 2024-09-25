@@ -894,8 +894,8 @@ section#contact .contact_form {
     max-width: 1130px;
     color:#000000;
     padding: 1rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 6rem;
+    margin-left: 6rem;
 }
 
 section#contact h1 {
@@ -974,7 +974,6 @@ section#contact .overlay-text {
 
 section#contact .contact_gif {
     width: 100%;
-    max-width: 350px;
     margin: 0 auto; 
 }
 
@@ -1020,6 +1019,15 @@ section#contact .contact_gif img{
 
 /*----------------------CONTACT RESPONSIVE DESIGN------------------------*/
 
+
+@media (max-width: 1530px) {
+    section#contact .contact_form {
+        margin-right: 2rem;
+        margin-left: 0rem;
+    }
+}
+
+
 @media (max-width: 800px) {
     section#contact {
         flex-direction: column; 
@@ -1029,6 +1037,7 @@ section#contact .contact_gif img{
     }
 
     section#contact .contact_form {
+        margin-left: 2rem;
         width: 100%;
         max-width: 400px;
         order:2;
