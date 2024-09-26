@@ -621,7 +621,7 @@ section#product .box_container .small_img img{
     
 }
 
-
+section#product .box_container .small_img video:hover,
 section#product .box_container .small_img img:hover{ 
     opacity: 80%;
 }
@@ -655,7 +655,7 @@ section#product .box_container .main_img img:hover {
 
 
 
-
+section#product .box_container .small_img button.selected video, 
 section#product .box_container .small_img button.selected img { 
     border-color: #121212;
     opacity: 100%;
@@ -671,10 +671,13 @@ section#product .box_container .text_box {
 }
 
 
+
+
 section#product h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 5px rgb(196, 196, 207);
+    text-align: left; /*new*/
 }
 
 
@@ -705,6 +708,54 @@ section#product .box_container .text_box button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Ensure video and image have the same border and responsive styles */
+
+
+section#product .box_container .main_img video { 
+    max-height: 40rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    border-radius: 2%;
+}
+
+
+
+/*video preview */
+section#product .box_container .small_img video {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 15%;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    opacity: 90%;
+}
+
+
+
+
+  
 
 
 
@@ -817,6 +868,11 @@ section#product .box_container .text_box button {
     }
 
     section#product .box_container .small_img img{ 
+        width: 50px;
+        height: 50px;
+    }
+
+    section#product .box_container .small_img video {
         width: 50px;
         height: 50px;
     }
