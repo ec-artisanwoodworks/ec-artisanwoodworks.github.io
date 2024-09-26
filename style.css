@@ -738,6 +738,7 @@ section#product .box_container .main_img video {
 
 
 
+
 /*video preview */
 section#product .box_container .small_img video {
     width: 80px;
@@ -837,9 +838,11 @@ section#product .box_container .small_img video {
         padding-right: 0.5rem;
     }
 
+    section#product .box_container .main_img video,
     section#product .box_container .main_img img { 
         margin-right: 0rem;
     }
+
 
     section#product .box_container .img_box {
         margin-right: 0;
@@ -867,12 +870,8 @@ section#product .box_container .small_img video {
         padding-right: none;
     }
 
+    section#product .box_container .small_img video,
     section#product .box_container .small_img img{ 
-        width: 50px;
-        height: 50px;
-    }
-
-    section#product .box_container .small_img video {
         width: 50px;
         height: 50px;
     }
