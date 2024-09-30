@@ -114,7 +114,7 @@ header {
 }
 
 .logo_img{
-    width: 50px;
+    width: 8rem;
     height: auto;
     position: relative;
     margin-right: 8;
@@ -775,13 +775,13 @@ section#product .box_container .small_img video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* On top of all other content */
+    z-index: 1000;
 }
 
 
@@ -792,6 +792,61 @@ section#product .box_container .small_img video {
     cursor: zoom-out;
 }
 
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.left-arrow {
+    left: 2rem;
+}
+
+.right-arrow {
+    right: 2rem;
+}
+
+.nav-arrow:hover {
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Removed this function
+
 .fullscreen-container .close-btn {
     position: absolute;
     top: 1rem;
@@ -801,13 +856,13 @@ section#product .box_container .small_img video {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1001; /* Above the image */
+    z-index: 1001; 
 }
 
 .fullscreen-container .close-btn:hover {
     color: #cc2a2a;
 }
-
+*/
 
 
 
