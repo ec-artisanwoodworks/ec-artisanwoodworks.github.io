@@ -793,6 +793,8 @@ section#product .box_container .small_img video {
 }
 
 
+
+/*Toggle through img*/
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -817,18 +819,6 @@ section#product .box_container .small_img video {
 .nav-arrow:hover {
     color: #cccccc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

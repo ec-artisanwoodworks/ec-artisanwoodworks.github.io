@@ -201,24 +201,68 @@
 
 
 
-    // Function to toggle fullscreen mode on main image
+    let currentIndex = 0;
+
+    // Fullscreen function
     document.querySelector('.main_img img').addEventListener('click', function () {
-        // Create the fullscreen container
+        const smallImages = document.querySelectorAll('.small_img img');
+        currentIndex = Array.from(smallImages).findIndex(img => img.src === this.src);
+    
+        // Create fullscreen container
         const fullscreenContainer = document.createElement('div');
         fullscreenContainer.classList.add('fullscreen-container');
     
-        // Add the image to the fullscreen container
-        const fullscreenImage = this.cloneNode(); // Clone the clicked image
+        // Create fullscreen image
+        const fullscreenImage = this.cloneNode();
+        fullscreenImage.classList.add('fullscreen-image');
         fullscreenContainer.appendChild(fullscreenImage);
+    
+        // Add navigation arrows
+        const leftArrow = document.createElement('button');
+        leftArrow.classList.add('nav-arrow', 'left-arrow');
+        leftArrow.innerHTML = '&#10094;'; // Left arrow symbol
+    
+        const rightArrow = document.createElement('button');
+        rightArrow.classList.add('nav-arrow', 'right-arrow');
+        rightArrow.innerHTML = '&#10095;'; // Right arrow symbol
+    
+        fullscreenContainer.appendChild(leftArrow);
+        fullscreenContainer.appendChild(rightArrow);
     
         // Add the fullscreen container to the body
         document.body.appendChild(fullscreenContainer);
     
-        // Close the fullscreen when the image is clicked
-        fullscreenImage.addEventListener('click', function () {
-            document.body.removeChild(fullscreenContainer); // Remove the fullscreen container
+        // Function to update fullscreen image
+        function updateImage(index) {
+            if (index >= 0 && index < smallImages.length) {
+                fullscreenImage.src = smallImages[index].src;
+                currentIndex = index;
+            }
+        }
+    
+        // Arrow functionality
+        leftArrow.addEventListener('click', function () {
+            updateImage(currentIndex - 1);
+        });
+    
+        rightArrow.addEventListener('click', function () {
+            updateImage(currentIndex + 1);
+        });
+    
+        // Close fullscreen when image or container is clicked
+        fullscreenContainer.addEventListener('click', function (e) {
+            if (e.target === fullscreenContainer || e.target === fullscreenImage) {
+                document.body.removeChild(fullscreenContainer);
+            }
         });
     });
+
+
+
+
+
+
+    
 
 
 
