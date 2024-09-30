@@ -921,6 +921,13 @@ section#product .box_container .small_img video {
         height: 50px;
     }
     
+    .left-arrow {
+        left: 1rem;
+    }
+    
+    .right-arrow {
+        right: 1rem;
+    }
 
 }
 
