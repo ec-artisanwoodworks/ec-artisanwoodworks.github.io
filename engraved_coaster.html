@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en"> <!--ensures usage of lastest html version + language-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--this code is used to control edge rendering mode as edge doesn't follow web standards more consistently-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ensures proper scaling on mobile devices-->
+
+    <!--Font Awesome;-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!-- Remix Icon-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!--Personal sheet-->  
+    <link rel="stylesheet" href="style.css">
+    <title>Eleonora RMC. WoodWorking</title>
+
+
+
+    <!--emailjs-->
+    <script type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('IyWorBnSUtJvVcL9N');
+        })();
+    </script>
+
+
+
+</head>
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+
+
+    <body>
+
+        <header>
+            <!--Navigation Bar-->
+            <div class="navbar"> <!-- div is used as a container for a group of html elements-->
+                <!--Logo-->
+                <div class="logo_container">
+                    <a href="index.html"><img src="Images/logo/Abbreviated_FullName/logo_abbreviated_FullName_V2.4.png" class="logo_img"></a>
+                    <!--<div class="logo"><a href="index.html">Eleonora C. Artisan Woodworks</a></div>-->
+                </div>
+
+
+                <!--links-->
+                <ul class="links"> <!--ul=unordered list-->
+                    <li> <a href="index.html#about">About</a></li>
+                    <li> <a href="index.html#work">My Work</a></li>
+                    <li> <a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <!--toggle-->
+                <div class="toggle_btn"> <!--In this case I'm adding a toggle button-->
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!--Dropdown Menu-->
+            <div class="dropdown_menu">
+                <li> <a href="index.html#about" class="dropdown-link">About</a></li>
+                <li> <a href="index.html#work" class="dropdown-link">My Work</a></li>
+                <li> <a href="index.html#contact" class="dropdown-link">Contact</a></li>   
+            </div>
+        </header>
+
+        
+
+
+
+
+
+        
+
+        <main>
+
+
+            <!--Product-->
+            <section class="product" id="product">
+
+                
+                <div class="box_container"> 
+                    
+                    <div class="img_box">
+
+                        <div class="small_img">
+                            <button class="selected"><img src="Images/Coaster/bird_10.4.24/Eldorado_upright.jpg" alt=""></button>
+                            <br>
+                            <button><img src="Images/Coaster/bird_10.4.24/Eldorado_flat.jpg" alt=""></button>
+                            <br>
+                            <button><img src="Images/Coaster/bird_10.4.24/Eldorado_flat_spice.jpg" alt=""></button>
+                            <br>
+                            <button><img src="Images/Coaster/bird_10.4.24/Eldorado_Stellers_Jay_watermarked.jpg" alt=""></button>
+                        </div>
+                        
+                        <div class="main_img">
+                            <img src="Images/Coaster/bird_10.4.24/Eldorado_upright.jpg" alt="">
+                            
+
+                        </div>
+
+                    </div>
+
+                    <div class="text_box">
+                        <h2> Engraved Coaster </h2>
+                        <p> A wooden coaster for a more stylish look. Add an engraving to create a memorable piece. </p>
+                        <p>&nbsp;</p>
+                        <p> Wooden coasters tend to repel water rather than absorb it like a cork coaster. Unless you're creating a pool on your table, these little pieces will protect your table from harm and look cool doing it. Please do note that wooden coasters tend to get some waterstains when water is left on them for a long time.
+                            Reclaimed oak, walnut and cherry were used to create this particular coaster.</p>
+                        <p>&nbsp;</p>
+                        <a href="javascript:history.back()">
+                            <button type="button"> Go Back </button>
+                        </a>
+
+                        
+                        </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+        <!--copyright -->
+        <footer>
+                <p>&copy; 2024 Eleonora Claessens
+                    <!--<a href="#home"><img src="./Images/logo_version2.22_3_white.png" class="logo_img_foot"></a>-->
+        </footer>
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+<!--JAVASCRIPT-->
+
+<script>
+function setupImageSwitcher() {
+    // Get all the buttons and the main image
+    const buttons = document.querySelectorAll('.small_img button');
+    const mainImageContainer = document.querySelector('.main_img');
+    const mainImage = mainImageContainer.querySelector('img');
+    let mainVideo = null;
+
+    // Set up click event listeners for each button
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const videoElement = this.querySelector('video');
+            const imageElement = this.querySelector('img');
+            
+            // Check if it's a video or image
+            if (videoElement) {
+                // If it's a video, replace the image with the video element
+                if (mainVideo) {
+                    mainVideo.remove(); // Remove any previous video
+                }
+                
+                mainVideo = document.createElement('video');
+                mainVideo.src = videoElement.src;
+                mainVideo.controls = true;
+                mainVideo.autoplay = true;
+                mainVideo.poster = videoElement.poster; // Set the same poster image
+                mainVideo.style.maxWidth = '100%'; // Ensure responsive
+                mainVideo.style.maxHeight = '40rem';
+                mainVideo.style.borderRadius = '2%'; // Apply border styles
+                
+                mainImage.style.display = 'none'; // Hide the image
+                mainImageContainer.appendChild(mainVideo);
+            } else {
+                // If it's an image, replace video with the image
+                if (mainVideo) {
+                    mainVideo.remove(); // Remove any video if it exists
+                    mainImage.style.display = 'block'; // Show the image
+                }
+                mainImage.src = imageElement.src;
+            }
+
+            // Remove 'selected' class from all buttons
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            // Add 'selected' class to the clicked button
+            this.classList.add('selected');
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupImageSwitcher);
+
+
+
+
+
+
+
+
+let currentIndex = 0;
+
+// Fullscreen function
+document.querySelector('.main_img img').addEventListener('click', function () {
+    const smallImages = document.querySelectorAll('.small_img img');
+    currentIndex = Array.from(smallImages).findIndex(img => img.src === this.src);
+
+    // Create fullscreen container
+    const fullscreenContainer = document.createElement('div');
+    fullscreenContainer.classList.add('fullscreen-container');
+
+    // Create fullscreen image
+    const fullscreenImage = this.cloneNode();
+    fullscreenImage.classList.add('fullscreen-image');
+    fullscreenContainer.appendChild(fullscreenImage);
+
+    // Add navigation arrows
+    const leftArrow = document.createElement('button');
+    leftArrow.classList.add('nav-arrow', 'left-arrow');
+    leftArrow.innerHTML = '&#10094;'; // Left arrow symbol
+
+    const rightArrow = document.createElement('button');
+    rightArrow.classList.add('nav-arrow', 'right-arrow');
+    rightArrow.innerHTML = '&#10095;'; // Right arrow symbol
+
+    fullscreenContainer.appendChild(leftArrow);
+    fullscreenContainer.appendChild(rightArrow);
+
+    // Add the fullscreen container to the body
+    document.body.appendChild(fullscreenContainer);
+
+    // Function to update fullscreen image
+    function updateImage(index) {
+        if (index >= 0 && index < smallImages.length) {
+            fullscreenImage.src = smallImages[index].src;
+            currentIndex = index;
+        }
+    }
+
+    // Arrow functionality
+    leftArrow.addEventListener('click', function () {
+        updateImage(currentIndex - 1);
+    });
+
+    rightArrow.addEventListener('click', function () {
+        updateImage(currentIndex + 1);
+    });
+
+    // Close fullscreen when image or container is clicked
+    fullscreenContainer.addEventListener('click', function (e) {
+        if (e.target === fullscreenContainer || e.target === fullscreenImage) {
+            document.body.removeChild(fullscreenContainer);
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+    //DROP DOWN MENU
+    const toggle_button = document.querySelector('.toggle_btn');
+    const toggle_button_icon = document.querySelector('.toggle_btn i');
+    const dropdownmenu = document.querySelector('.dropdown_menu');
+
+    toggle_button.onclick = function() {
+        dropdownmenu.classList.toggle('open');
+        updateToggleButtonIcon();
+    };
+
+    function updateToggleButtonIcon() {
+        const isOpen = dropdownmenu.classList.contains('open');
+        toggle_button_icon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    }
+
+    // Close dropdown
+    document.addEventListener("DOMContentLoaded", function() {
+        var dropdownLinks = document.querySelectorAll('.dropdown_menu .dropdown-link');
+    
+        dropdownLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                dropdownmenu.classList.remove('open');
+                updateToggleButtonIcon(); // Update the icon when the menu is closed
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+</body>
+
+</html>
