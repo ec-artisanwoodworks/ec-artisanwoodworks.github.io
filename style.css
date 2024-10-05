@@ -1352,31 +1352,29 @@ section#thanks .box_container .message_box button {
         padding-right: 0.5rem;
     }
 
-    section#thanks .box_container .main_img img { 
-        margin-right: 0rem;
-    }
-
-
 
     section#thanks .box_container .message_box {
         width: 100%;
         min-width: none;
         max-width: none;
         margin-right: 0rem;
-    }
-
-
-    section#thanks .box_container .message_box { 
         margin-top: 2rem;
-        width: 100%;
         padding: 1rem;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     section#thanks .box_container {
         padding-left: none;
         padding-right: none;
+    }
+
+    section#thanks .box_container .text {
+        margin-bottom: 2rem;
+    }
+
+    section#thanks .box_container .message_box {
+        margin-bottom: 2rem;
     }
     
     .left-arrow {
@@ -1385,6 +1383,11 @@ section#thanks .box_container .message_box button {
     
     .right-arrow {
         right: 1rem;
+    }
+
+    section#thanks .box_container img { 
+        max-height: 24rem;
+        max-width: 100%;
     }
 
 }
