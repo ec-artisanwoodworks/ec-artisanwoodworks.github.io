@@ -84,22 +84,23 @@
                 <div class="box_container"> 
                                       
                     <div class="message_box">
+                        
                         <div class="text">
                             <h2> Message Received! </h2>
                             <p>Thanks for leaving me a message. 
                                 When I’m on break from shaping wood and brushing off the layers of wooddust, I’ll be sure to get back to you!
                                 I usually respond within 2 to 3 business days.</p>
-
                         </div>
 
                         <div class="button">
                             <a href="javascript:history.back()">
                                 <button type="button"> Take Me Back! </button>
+                            </a>
                         </div>
 
                     </div>
 
-                    <div class="main_img">
+                    <div class="main_gif">
                         <img src="Images/Profile_pic/Goof_gif.gif" alt="">
                     </div>
 
@@ -125,125 +126,6 @@
 <!--JAVASCRIPT-->
 
 <script>
-function setupImageSwitcher() {
-    // Get all the buttons and the main image
-    const buttons = document.querySelectorAll('.small_img button');
-    const mainImageContainer = document.querySelector('.main_img');
-    const mainImage = mainImageContainer.querySelector('img');
-    let mainVideo = null;
-
-    // Set up click event listeners for each button
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const videoElement = this.querySelector('video');
-            const imageElement = this.querySelector('img');
-            
-            // Check if it's a video or image
-            if (videoElement) {
-                // If it's a video, replace the image with the video element
-                if (mainVideo) {
-                    mainVideo.remove(); // Remove any previous video
-                }
-                
-                mainVideo = document.createElement('video');
-                mainVideo.src = videoElement.src;
-                mainVideo.controls = true;
-                mainVideo.autoplay = true;
-                mainVideo.poster = videoElement.poster; // Set the same poster image
-                mainVideo.style.maxWidth = '100%'; // Ensure responsive
-                mainVideo.style.maxHeight = '40rem';
-                mainVideo.style.borderRadius = '2%'; // Apply border styles
-                
-                mainImage.style.display = 'none'; // Hide the image
-                mainImageContainer.appendChild(mainVideo);
-            } else {
-                // If it's an image, replace video with the image
-                if (mainVideo) {
-                    mainVideo.remove(); // Remove any video if it exists
-                    mainImage.style.display = 'block'; // Show the image
-                }
-                mainImage.src = imageElement.src;
-            }
-
-            // Remove 'selected' class from all buttons
-            buttons.forEach(btn => btn.classList.remove('selected'));
-            // Add 'selected' class to the clicked button
-            this.classList.add('selected');
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', setupImageSwitcher);
-
-
-
-
-
-
-
-
-let currentIndex = 0;
-
-// Fullscreen function
-document.querySelector('.main_img img').addEventListener('click', function () {
-    const smallImages = document.querySelectorAll('.small_img img');
-    currentIndex = Array.from(smallImages).findIndex(img => img.src === this.src);
-
-    // Create fullscreen container
-    const fullscreenContainer = document.createElement('div');
-    fullscreenContainer.classList.add('fullscreen-container');
-
-    // Create fullscreen image
-    const fullscreenImage = this.cloneNode();
-    fullscreenImage.classList.add('fullscreen-image');
-    fullscreenContainer.appendChild(fullscreenImage);
-
-    // Add navigation arrows
-    const leftArrow = document.createElement('button');
-    leftArrow.classList.add('nav-arrow', 'left-arrow');
-    leftArrow.innerHTML = '&#10094;'; // Left arrow symbol
-
-    const rightArrow = document.createElement('button');
-    rightArrow.classList.add('nav-arrow', 'right-arrow');
-    rightArrow.innerHTML = '&#10095;'; // Right arrow symbol
-
-    fullscreenContainer.appendChild(leftArrow);
-    fullscreenContainer.appendChild(rightArrow);
-
-    // Add the fullscreen container to the body
-    document.body.appendChild(fullscreenContainer);
-
-    // Function to update fullscreen image
-    function updateImage(index) {
-        if (index >= 0 && index < smallImages.length) {
-            fullscreenImage.src = smallImages[index].src;
-            currentIndex = index;
-        }
-    }
-
-    // Arrow functionality
-    leftArrow.addEventListener('click', function () {
-        updateImage(currentIndex - 1);
-    });
-
-    rightArrow.addEventListener('click', function () {
-        updateImage(currentIndex + 1);
-    });
-
-    // Close fullscreen when image or container is clicked
-    fullscreenContainer.addEventListener('click', function (e) {
-        if (e.target === fullscreenContainer || e.target === fullscreenImage) {
-            document.body.removeChild(fullscreenContainer);
-        }
-    });
-});
-
-
-
-
-
-
-
 
 
     //DROP DOWN MENU

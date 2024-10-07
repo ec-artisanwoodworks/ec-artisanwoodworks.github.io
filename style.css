@@ -1294,7 +1294,7 @@ section#thanks h2 {
 
 
 
-section#thanks .box_container .message_box button {
+section#thanks .box_container .message_box .button button{
     /*background-color: #06216d;*/
     background-color: #121212dc;;
     border-radius: 100px;
@@ -1312,7 +1312,7 @@ section#thanks .box_container .message_box button {
     touch-action: manipulation;
   }
   
-  section#thanks .box_container .message_box button:hover {
+  section#thanks .box_container .message_box .button button:hover {
     transform: scale(1.05);
   }
 
@@ -1362,6 +1362,7 @@ section#thanks .box_container .message_box button {
         padding: 1rem;
     }
 }
+
 
 @media (max-width: 400px) {
     section#thanks .box_container {
