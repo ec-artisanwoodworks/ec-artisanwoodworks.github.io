@@ -290,12 +290,16 @@ section#home .text {
     max-width: 50rem;
 }
 
+section#home p{
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
 section#home h1{
     font-size: 2.5rem;
     color:#ffffff;
     text-align: center;
 
-    text-shadow: 2px 2px 5px rgb(117, 117, 119);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 
@@ -332,6 +336,7 @@ section#home h1{
 
     section#home .text {
         background-color: #00000049;
+        border-radius: 10%;
     }
 }
 
@@ -344,6 +349,7 @@ section#home h1{
 
     section#home .main {
         flex-direction: column;
+        max-width: 80%;
     }
 
     section#home .text {
@@ -354,6 +360,14 @@ section#home h1{
     section#home video {
         width: 100%;
         height: auto;
+    }
+
+    section#home h1{
+        font-size: 2rem;
+
+    }
+
+    section#home p{
     }
     
     section#home .video {
