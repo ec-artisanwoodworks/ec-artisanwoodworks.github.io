@@ -275,8 +275,10 @@ section#home .video video{
     height: auto;
     width: 550px;
     max-width: 100%;
+    border-radius: 5%; 
+    border-style: solid ;
     border-radius: 5%;
-    overflow: hidden;
+    border-color:#000000;
 }
 
 
@@ -352,8 +354,12 @@ section#home h1{
     section#home video {
         width: 100%;
         height: auto;
-        margin-bottom: 1rem;
     }
+    
+    section#home .video {
+        max-width: 70%
+    }
+
 }
 
 
