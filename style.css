@@ -211,30 +211,6 @@ header {
 
 /* ------------------------------------------------------------------------------------*/
 
-/*Video*/
-#home_video {
-    position:absolute;
-    z-index: 0; /*background*/
-    height: calc(60vh);
-    left: 30%;
-    top: 50%;
-    transform:translate(-50%, -50%);
-    width: 100%;
-}
-
-
-
-@media (max-width: 1364px) {
-    #home_video {
-        height: calc(75vh);
-        left: 0%;
-        top: 10%;
-        transform:translate(0%, 0%);
-    }
-    
-}
-
-
 
 
 
@@ -258,22 +234,129 @@ section#home {
     justify-content: center;
     text-align: center;
     color:#fff;
+
     background: linear-gradient(to bottom, #12182b 0%, #121212 100%);
-    background-image: ;
+    background-image: url("Images/Backgrounds/garage_1.jpg");
+    background-size: cover;
 }
 
-.content{
-    z-index: 1;
+
+
+section#home .main {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+/*Video
+section#home .video video{
+    /*position:absolute;
+    z-index: 0; 
+    height: calc(60vh);
+    left: 30%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    width: 100%;
+}
+*/
+
+
+section#home .video {
+    margin: 3px;
+    margin-right: 10rem;
+}
+
+
+section#home .video video{
+    height: auto;
+    width: 550px;
+    max-width: 100%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+
+
+section#home .text {
+    width: 1000px;
+    text-align: justify;
+    padding: 5%;
+    max-width: 50rem;
 }
 
 section#home h1{
     font-size: 2.5rem;
     color:#ffffff;
     text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+
     text-shadow: 2px 2px 5px rgb(117, 117, 119);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------MOBILE_HOME----------------------------------------------*/
+
+/*@media (max-width: 1364px) {
+    #home .video {
+        height: calc(75vh);
+        left: 0%;
+        top: 10%;
+        transform:translate(0%, 0%);
+    }    
+}*/
+
+
+@media (max-width: 1364px) {
+    section#home .main {
+        flex-direction: column;
+    }
+
+    section#home .video {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    section#home .text {
+        background-color: #00000049;
+    }
+}
+
+
+
+
+@media (max-width: 800px) {
+    
+
+
+    section#home .main {
+        flex-direction: column;
+    }
+
+    section#home .text {
+        width: 100%;
+        padding: 3%;
+    }
+
+    section#home video {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+
 
 
 
@@ -350,6 +433,14 @@ section#about a:hover {
     }
 
 
+
+
+
+
+
+
+
+
 /*----------------------ABOUT RESPONSIVE DESIGN------------------------*/
 @media (max-width: 576px) {
     
@@ -365,8 +456,6 @@ section#about a:hover {
         width: 100%; /* Use the full width for the text */
         padding: 3%; /* Adjust padding */
     }
-
-
 
     section#about img {
         width: 100%; /* Adjust the image width to be fully responsive */
