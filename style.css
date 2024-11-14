@@ -541,9 +541,10 @@ section#work h3 {
 section#work .box_container { 
     margin-top: 7rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem,1fr)); /*17rem*/
+    grid-template-columns: repeat(auto-fit, minmax(14rem,1fr)); /*17rem*/
     place-items: center;
-    grid-gap: 1.5rem;
+    grid-gap: 2.5rem; /*previously 1.5rem*/
+    margin-bottom: 6rem;
 }
 
 
@@ -597,6 +598,8 @@ section#work .box_container button {
     -webkit-user-select: none;
     touch-action: manipulation;
   }
+  
+
   
   section#work .box_container button:hover {
     transform: scale(1.05);
