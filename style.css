@@ -1077,6 +1077,139 @@ section#product .box_container .small_img video {
 
 
 
+/* --------------------------------------CARE----------------------------------------------*/
+section#care {
+    min-height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color:#000000;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
+
+    padding: 15px;
+}
+
+section#care .main {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#care h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgb(196, 196, 207);
+    
+}
+
+
+section#care img {
+    height: auto;
+    width: 720px;
+    max-width: 40%;
+    border-radius: 5%;
+    margin-right:3rem;
+}
+
+section#care a {
+    font-weight: bold;
+}
+
+section#care p,
+section#care a {
+    color: #000000;
+    font-size: 1rem;
+}
+
+section#care .text {
+    width: 1000px;
+    text-align: justify;
+    padding: 5%;
+    max-width: 50rem;
+}
+
+section#care a:hover {
+    color: #c927a6;
+    cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+/*----------------------CARE RESPONSIVE DESIGN------------------------*/
+@media (max-width: 576px) {
+    
+    section#care{
+        height: auto
+    }
+
+    section#care .main {
+        flex-direction: column;
+    }
+
+    section#care .text {
+        width: 100%; /* Use the full width for the text */
+        padding: 3%; /* Adjust padding */
+    }
+
+    section#care img {
+        width: 100%; /* Adjust the image width to be fully responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Add some space below the image */
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
