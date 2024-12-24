@@ -1077,8 +1077,8 @@ section#product .box_container .small_img video {
 
 
 
-/* --------------------------------------WOOD_CARE---------------------------------------*/
-section#wood_care {
+/* --------------------------------------woodcare---------------------------------------*/
+section#woodcare {
     min-height: calc(100vh);
     display: flex;
     flex-direction: column;
@@ -1092,7 +1092,7 @@ section#wood_care {
     padding: 15px;
 }
 
-section#wood_care .main {
+section#woodcare .main {
     max-width: 95%;
     margin: 0 auto;
     display: flex;
@@ -1100,7 +1100,7 @@ section#wood_care .main {
     justify-content: space-around;
 }
 
-section#wood_care h1 {
+section#woodcare h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 5px rgb(196, 196, 207);
@@ -1108,7 +1108,7 @@ section#wood_care h1 {
 }
 
 
-section#wood_care img {
+section#woodcare img {
     height: auto;
     width: 720px;
     max-width: 40%;
@@ -1116,24 +1116,24 @@ section#wood_care img {
     margin-right:3rem;
 }
 
-section#wood_care a {
+section#woodcare a {
     font-weight: bold;
 }
 
-section#wood_care p,
-section#wood_care a {
+section#woodcare p,
+section#woodcare a {
     color: #000000;
     font-size: 1rem;
 }
 
-section#wood_care .text {
+section#woodcare .text {
     width: 1000px;
     text-align: justify;
     padding: 5%;
     max-width: 50rem;
 }
 
-section#wood_care a:hover {
+section#woodcare a:hover {
     color: #c927a6;
     cursor: pointer;
     }
@@ -1147,23 +1147,23 @@ section#wood_care a:hover {
 
 
 
-/*----------------------WOOD_CARE RESPONSIVE DESIGN------------------------*/
+/*----------------------WOODCARE RESPONSIVE DESIGN------------------------*/
 @media (max-width: 576px) {
     
-    section#wood_care{
+    section#woodcare{
         height: auto
     }
 
-    section#wood_care .main {
+    section#woodcare .main {
         flex-direction: column;
     }
 
-    section#wood_care .text {
+    section#woodcare .text {
         width: 100%; /* Use the full width for the text */
         padding: 3%; /* Adjust padding */
     }
 
-    section#wood_care img {
+    section#woodcare img {
         width: 100%; /* Adjust the image width to be fully responsive */
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 1rem; /* Add some space below the image */
