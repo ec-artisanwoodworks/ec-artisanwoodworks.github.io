@@ -150,7 +150,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 120px;
+    height: 170px;
 }
 
 .dropdown_menu li {
@@ -1104,7 +1104,6 @@ section#woodcare h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 5px rgb(196, 196, 207);
-    
 }
 
 
